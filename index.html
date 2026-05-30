@@ -32,9 +32,7 @@
       --px: 24px;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Instrument Sans', sans-serif;
@@ -84,7 +82,6 @@
       flex-shrink: 0;
     }
 
-    /* Hamburger */
     .hamburger {
       display: flex;
       flex-direction: column;
@@ -109,27 +106,14 @@
       transform-origin: center;
     }
 
-    .hamburger.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    .hamburger.open span:nth-child(2) {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-
-    .hamburger.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    /* Mobile Nav */
     .nav-drawer {
       display: none;
       position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 72px; left: 0; right: 0; bottom: 0;
       background: #fff;
       z-index: 998;
       flex-direction: column;
@@ -138,20 +122,11 @@
       animation: slideDown .25s ease;
     }
 
-    .nav-drawer.open {
-      display: flex;
-    }
+    .nav-drawer.open { display: flex; }
 
     @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .nav-drawer a {
@@ -178,10 +153,7 @@
       font-weight: 600;
     }
 
-    /* Desktop Nav */
-    .desk-nav {
-      display: none;
-    }
+    .desk-nav { display: none; }
 
     /* ── BUTTONS ── */
     .btn-primary {
@@ -198,11 +170,7 @@
       gap: 8px;
       transition: background .2s, transform .2s;
     }
-
-    .btn-primary:hover {
-      background: var(--blue-dark);
-      transform: translateY(-2px);
-    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
 
     .btn-outline {
       background: transparent;
@@ -219,13 +187,9 @@
       gap: 8px;
       transition: border-color .2s, background .2s;
     }
+    .btn-outline:hover { border-color: var(--ink); background: var(--surface); }
 
-    .btn-outline:hover {
-      border-color: var(--ink);
-      background: var(--surface);
-    }
-
-    /* ── HERO (SPLIT LAYOUT) ── */
+    /* ── HERO ── */
     .hero {
       padding: 60px var(--px);
       background: var(--surface);
@@ -236,9 +200,7 @@
       min-height: calc(100vh - 72px);
     }
 
-    .hero-content {
-      max-width: 650px;
-    }
+    .hero-content { max-width: 650px; }
 
     .hero-badge {
       display: inline-flex;
@@ -262,11 +224,7 @@
       color: var(--ink);
       margin-bottom: 24px;
     }
-
-    .hero h1 em {
-      color: var(--blue);
-      font-style: normal;
-    }
+    .hero h1 em { color: var(--blue); font-style: normal; }
 
     .hero p {
       font-size: 17px;
@@ -275,11 +233,7 @@
       line-height: 1.8;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
     .hero-image-wrapper {
       position: relative;
@@ -287,18 +241,10 @@
       overflow: hidden;
       box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
     }
-
-    .hero-image-wrapper img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
+    .hero-image-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; }
 
     /* ── SECTION COMMONS ── */
-    section {
-      padding: 80px var(--px);
-    }
+    section { padding: 80px var(--px); }
 
     .section-head {
       text-align: center;
@@ -324,16 +270,10 @@
       line-height: 1.2;
     }
 
-    .section-sub {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    .section-sub { font-size: 16px; color: var(--muted); line-height: 1.7; }
 
     /* ── FEATURES ── */
-    .features {
-      background: var(--white);
-    }
+    .features { background: var(--white); }
 
     .feat-grid {
       display: grid;
@@ -350,11 +290,7 @@
       padding: 32px;
       transition: transform .3s, box-shadow .3s;
     }
-
-    .feat-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
-    }
+    .feat-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05); }
 
     .feat-icon {
       width: 56px;
@@ -370,85 +306,263 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
-    .feat-card h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
+    .feat-card h3 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+    .feat-card p { font-size: 15px; color: var(--muted); line-height: 1.6; }
 
-    .feat-card p {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
+    /* ── VIDEO PLAYER ── */
+    .video-section { background: var(--surface); }
 
-    /* ── VIDEO ── */
-    .video-section {
-      background: var(--surface);
-    }
-
-    .video-wrap {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      aspect-ratio: 16/9;
-      background: #0f172a;
-      position: relative;
-      box-shadow: 0 24px 48px rgba(15, 23, 42, 0.1);
+    .vp-outer {
       max-width: 1000px;
       margin: 0 auto;
     }
 
-    .video-poster {
+    .vp-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: #060d1a;
+      box-shadow: 0 32px 80px rgba(15,23,42,.20), 0 0 0 1px rgba(255,255,255,.06);
+      cursor: pointer;
+    }
+
+    .vp-wrap video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.6;
+      display: block;
     }
 
-    .play-btn {
+    /* Unmute pill */
+    .vp-unmute {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 72px;
-      height: 72px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 50%;
+      top: 14px;
+      right: 14px;
+      z-index: 12;
+      transition: opacity .35s, transform .35s;
+    }
+    .vp-unmute.hidden { opacity: 0; pointer-events: none; transform: translateY(-6px); }
+    .vp-unmute-pill {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 7px;
+      background: rgba(8,14,30,.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 40px;
+      padding: 7px 14px 7px 10px;
+      color: #fff;
+      font-size: 12.5px;
+      font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-      transition: transform 0.2s;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+      user-select: none;
     }
+    .vp-unmute-pill:hover { background: rgba(37,99,235,.85); transform: scale(1.04); }
+    .vp-unmute-pill i { font-size: 14px; }
 
-    .play-btn:hover {
-      transform: translate(-50%, -50%) scale(1.05);
-    }
-
-    .play-btn i {
-      color: var(--blue);
+    /* Center play/pause */
+    .vp-center {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%) scale(1);
+      width: 68px; height: 68px;
+      background: rgba(255,255,255,.93);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
       font-size: 24px;
-      margin-left: 4px;
+      color: var(--blue);
+      box-shadow: 0 4px 24px rgba(0,0,0,.35);
+      pointer-events: none;
+      z-index: 6;
+      transition: opacity .28s, transform .28s;
     }
+    .vp-center i { margin-left: 3px; }
+    .vp-center.playing { opacity: 0; transform: translate(-50%,-50%) scale(.78); }
+    .vp-center.flash   { opacity: .88 !important; transform: translate(-50%,-50%) scale(1.1) !important; }
+
+    /* Controls overlay */
+    .vp-controls {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 10;
+      padding: 48px 16px 14px;
+      background: linear-gradient(to top, rgba(4,9,20,.85) 0%, transparent 100%);
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity .22s, transform .22s;
+      pointer-events: none;
+    }
+    .vp-wrap:hover .vp-controls,
+    .vp-wrap.show-ctrl .vp-controls {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    /* Progress bar */
+    .vp-prog-track {
+      position: relative;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 6px;
+    }
+    .vp-prog-bg {
+      width: 100%;
+      height: 3px;
+      background: rgba(255,255,255,.22);
+      border-radius: 3px;
+      position: relative;
+      overflow: visible;
+      transition: height .15s;
+    }
+    .vp-prog-track:hover .vp-prog-bg { height: 5px; }
+    .vp-prog-fill {
+      height: 100%;
+      background: var(--blue);
+      border-radius: 3px;
+      width: 0%;
+      pointer-events: none;
+    }
+    .vp-prog-buf {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      background: rgba(255,255,255,.18);
+      border-radius: 3px;
+      width: 0%;
+      pointer-events: none;
+    }
+    .vp-prog-thumb {
+      position: absolute;
+      top: 50%; left: 0%;
+      transform: translate(-50%,-50%) scale(0);
+      width: 13px; height: 13px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.5);
+      transition: transform .18s, left .08s linear;
+      pointer-events: none;
+    }
+    .vp-prog-track:hover .vp-prog-thumb { transform: translate(-50%,-50%) scale(1); }
+
+    /* Tooltip */
+    .vp-tooltip {
+      position: absolute;
+      bottom: 22px;
+      background: rgba(4,9,20,.88);
+      color: #fff;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      transition: opacity .12s;
+    }
+    .vp-prog-track:hover .vp-tooltip { opacity: 1; }
+
+    /* Bottom bar */
+    .vp-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+    .vp-left, .vp-right { display: flex; align-items: center; gap: 2px; }
+
+    .vp-btn {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,.9);
+      font-size: 15px;
+      width: 34px; height: 34px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+      flex-shrink: 0;
+    }
+    .vp-btn:hover { background: rgba(255,255,255,.14); color: #fff; }
+
+    .vp-time {
+      font-size: 12px;
+      color: rgba(255,255,255,.8);
+      font-weight: 500;
+      white-space: nowrap;
+      padding: 0 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .vp-vol-wrap {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .vp-vol-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 64px;
+      height: 3px;
+      border-radius: 3px;
+      background: rgba(255,255,255,.3);
+      outline: none;
+      cursor: pointer;
+      transition: width .2s;
+    }
+    .vp-vol-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+    }
+    .vp-vol-slider::-moz-range-thumb {
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Speed badge */
+    .vp-speed {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,.85);
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 5px;
+      padding: 3px 7px;
+      cursor: pointer;
+      transition: background .15s;
+      white-space: nowrap;
+    }
+    .vp-speed:hover { background: rgba(255,255,255,.2); }
 
     .video-caption {
       text-align: center;
-      margin-top: 16px;
-      font-size: 14px;
+      margin-top: 14px;
+      font-size: 13px;
       color: var(--muted);
     }
 
-    /* ── COMPARISON TABLE ── */
-    .comparison {
-      background: var(--white);
+    @media(max-width: 520px) {
+      .vp-vol-slider { width: 44px; }
+      .vp-time { font-size: 11px; }
+      .vp-speed { display: none; }
     }
 
-    .comp-inner {
-      max-width: 1050px;
-      margin: 0 auto;
-    }
+    /* ── COMPARISON TABLE ── */
+    .comparison { background: var(--white); }
+    .comp-inner { max-width: 1050px; margin: 0 auto; }
 
     .table-wrap {
       background: var(--white);
@@ -458,56 +572,26 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 700px;
-    }
-
-    thead {
-      background: var(--ink);
-    }
-
+    table { width: 100%; border-collapse: collapse; min-width: 700px; }
+    thead { background: var(--ink); }
     thead th {
       padding: 20px 24px;
       font-size: 13px;
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255,255,255,.8);
       text-transform: uppercase;
       text-align: left;
       letter-spacing: 1px;
     }
-
     thead th:nth-child(2),
-    thead th:nth-child(3) {
-      text-align: center;
-      width: 30%;
-    }
+    thead th:nth-child(3) { text-align: center; width: 30%; }
+    thead th:nth-child(3) { color: #fff; background: var(--blue); }
 
-    thead th:nth-child(3) {
-      color: #fff;
-      background: var(--blue);
-    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
 
-    tbody tr {
-      border-bottom: 1px solid var(--border);
-    }
-
-    tbody tr:last-child {
-      border-bottom: none;
-    }
-
-    td {
-      padding: 20px 24px;
-      font-size: 15px;
-      color: var(--ink);
-      line-height: 1.5;
-    }
-
-    td:nth-child(2),
-    td:nth-child(3) {
-      text-align: center;
-    }
+    td { padding: 20px 24px; font-size: 15px; color: var(--ink); line-height: 1.5; }
+    td:nth-child(2), td:nth-child(3) { text-align: center; }
 
     .badge {
       display: inline-flex;
@@ -520,27 +604,12 @@
       width: 100%;
       justify-content: center;
     }
-
-    .badge-no {
-      background: var(--surface);
-      color: var(--muted);
-    }
-
-    .badge-yes {
-      background: var(--blue-light);
-      color: var(--blue-dark);
-    }
-
-    .col-highlight {
-      background: #fcfcfd;
-      font-weight: 500;
-    }
+    .badge-no  { background: var(--surface); color: var(--muted); }
+    .badge-yes { background: var(--blue-light); color: var(--blue-dark); }
+    .col-highlight { background: #fcfcfd; font-weight: 500; }
 
     /* ── TESTIMONIALS ── */
-    .testimonials {
-      background: var(--surface);
-    }
-
+    .testimonials { background: var(--surface); }
     .test-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -554,78 +623,27 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 32px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,.02);
     }
-
-    .stars {
-      color: #f59e0b;
-      font-size: 14px;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-
-    .test-card blockquote {
-      font-size: 15px;
-      color: var(--ink);
-      line-height: 1.8;
-      margin-bottom: 24px;
-      font-style: italic;
-    }
-
-    .test-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+    .test-card blockquote { font-size: 15px; color: var(--ink); line-height: 1.8; margin-bottom: 24px; font-style: italic; }
+    .test-author { display: flex; align-items: center; gap: 12px; }
     .avatar {
-      width: 44px;
-      height: 44px;
+      width: 44px; height: 44px;
       border-radius: 50%;
       background: var(--blue-light);
       color: var(--blue-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px;
     }
-
-    .test-name {
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--ink);
-    }
-
-    .test-role {
-      font-size: 13px;
-      color: var(--muted);
-    }
+    .test-name { font-weight: 600; font-size: 15px; color: var(--ink); }
+    .test-role { font-size: 13px; color: var(--muted); }
 
     /* ── CTA ── */
-    .cta {
-      background: var(--ink);
-      padding: 100px var(--px);
-      text-align: center;
-      color: #fff;
-    }
-
-    .cta-inner {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .cta .section-title {
-      color: #fff;
-      margin-bottom: 24px;
-    }
-
-    .cta p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-
+    .cta { background: var(--ink); padding: 100px var(--px); text-align: center; color: #fff; }
+    .cta-inner { max-width: 600px; margin: 0 auto; }
+    .cta .section-title { color: #fff; margin-bottom: 24px; }
+    .cta p { color: rgba(255,255,255,.7); font-size: 18px; margin-bottom: 40px; }
     .btn-white {
       background: #fff;
       color: var(--ink);
@@ -639,297 +657,84 @@
       gap: 10px;
       transition: transform .2s;
     }
+    .btn-white:hover { transform: translateY(-3px); }
 
-    .btn-white:hover {
-      transform: translateY(-3px);
-    }
-
-    /* ── FOOTER STYLES (YENİ & PROFESYONEL) ── */
+    /* ── FOOTER ── */
     footer {
       background: var(--ink);
       padding: 60px var(--px) 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.8);
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.8);
     }
-
-    .footer-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
+    .footer-inner { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; gap: 60px; }
+    .footer-top { display: grid; grid-template-columns: 1fr; gap: 40px; }
+    .footer-section { flex: 1; }
+    .footer-brand { max-width: 300px; }
+    .footer-brand .logo { color: #fff; margin-bottom: 16px; }
+    .footer-desc { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.6; margin-bottom: 16px; }
+    .footer-status { display: flex; align-items: center; gap: 8px; }
+    .footer-links-group { display: flex; flex-direction: column; gap: 16px; }
+    .footer-section-title { font-size: 14px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 14px; transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-support { display: flex; flex-direction: column; gap: 16px; }
+    .support-buttons { display: flex; flex-direction: column; gap: 10px; }
+    .btn-whatsapp, .btn-email {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 16px; border-radius: var(--radius);
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      transition: all .2s; border: 1px solid transparent;
     }
+    .btn-whatsapp { background: #25D366; color: #fff; }
+    .btn-whatsapp:hover { background: #20ba58; transform: translateY(-2px); box-shadow: 0 8px 16px rgba(37,211,102,.3); }
+    .btn-email { background: rgba(255,255,255,.1); color: #fff; border-color: rgba(255,255,255,.2); }
+    .btn-email:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.3); transform: translateY(-2px); }
 
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-
-    .footer-section {
-      flex: 1;
-    }
-
-    .footer-brand {
-      max-width: 300px;
-    }
-
-    .footer-brand .logo {
-      color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .footer-desc {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .footer-status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .footer-links-group {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .footer-section-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      font-size: 14px;
-      transition: color .2s;
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    .footer-support {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .support-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .btn-whatsapp,
-    .btn-email {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 16px;
-      border-radius: var(--radius);
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all .2s;
-      border: 1px solid transparent;
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: #fff;
-    }
-
-    .btn-whatsapp:hover {
-      background: #20ba58;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-email {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-email:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-    }
-
-    /* FOOTER BOTTOM */
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255,255,255,.1);
       padding-top: 32px;
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
       text-align: center;
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255,255,255,.6);
     }
-
-    .footer-copyright {
-      order: 3;
-    }
-
-    .footer-bottom-links {
-      order: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .footer-bottom-links a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    .footer-bottom-links a:hover {
-      color: #fff;
-    }
-
-    .footer-socials {
-      order: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-
+    .footer-copyright { order: 3; }
+    .footer-bottom-links { order: 2; display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .footer-bottom-links a { color: rgba(255,255,255,.7); text-decoration: none; transition: color .2s; }
+    .footer-bottom-links a:hover { color: #fff; }
+    .footer-socials { order: 1; display: flex; align-items: center; justify-content: center; gap: 16px; }
     .footer-socials a {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 16px;
-      transition: all .2s;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,.1); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 16px;
+      transition: all .2s; border: 1px solid rgba(255,255,255,.2);
     }
+    .footer-socials a:hover { background: var(--blue); border-color: var(--blue); transform: translateY(-3px); }
 
-    .footer-socials a:hover {
-      background: var(--blue);
-      border-color: var(--blue);
-      transform: translateY(-3px);
-    }
-
-    /* ── DESKTOP FOOTER ADJUSTMENTS ── */
+    /* ── DESKTOP ── */
     @media(min-width: 900px) {
-      .footer-top {
-        grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
-        gap: 60px;
-      }
-
-      .footer-bottom {
-        grid-template-columns: 1fr auto 1fr;
-        gap: 40px;
-        text-align: left;
-        align-items: center;
-      }
-
-      .footer-copyright {
-        order: 1;
-      }
-
-      .footer-bottom-links {
-        order: 2;
-        justify-content: center;
-      }
-
-      .footer-socials {
-        order: 3;
-        justify-content: flex-end;
-      }
-
-      .support-buttons {
-        flex-direction: row;
-      }
-
-      .btn-whatsapp,
-      .btn-email {
-        flex: 1;
-      }
-    }
-
-    /* ── DESKTOP ADJUSTMENTS (GENEL) ── */
-    @media(min-width: 900px) {
-      :root {
-        --px: 60px;
-      }
-
-      .hamburger {
-        display: none;
-      }
-
-      .desk-nav {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-      }
-
-      .desk-nav a {
-        text-decoration: none;
-        color: var(--ink-light);
-        font-size: 15px;
-        font-weight: 500;
-        transition: color .2s;
-      }
-
-      .desk-nav a:hover {
-        color: var(--blue);
-      }
-
-      .nav-cta {
-        background: var(--ink);
-        color: #fff !important;
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-      }
-
-      .nav-cta:hover {
-        background: var(--blue);
-      }
-
-      .hero {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .feat-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .test-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      section {
-        padding: 120px var(--px);
-      }
+      :root { --px: 60px; }
+      .hamburger { display: none; }
+      .desk-nav { display: flex; align-items: center; gap: 32px; }
+      .desk-nav a { text-decoration: none; color: var(--ink-light); font-size: 15px; font-weight: 500; transition: color .2s; }
+      .desk-nav a:hover { color: var(--blue); }
+      .nav-cta { background: var(--ink); color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+      .nav-cta:hover { background: var(--blue); }
+      .hero { grid-template-columns: 1fr 1fr; }
+      .feat-grid { grid-template-columns: repeat(3, 1fr); }
+      .test-grid { grid-template-columns: repeat(3, 1fr); }
+      section { padding: 120px var(--px); }
+      .footer-top { grid-template-columns: 1.2fr 1fr 1fr 1.3fr; gap: 60px; }
+      .footer-bottom { grid-template-columns: 1fr auto 1fr; gap: 40px; text-align: left; align-items: center; }
+      .footer-copyright { order: 1; }
+      .footer-bottom-links { order: 2; justify-content: center; }
+      .footer-socials { order: 3; justify-content: flex-end; }
+      .support-buttons { flex-direction: row; }
+      .btn-whatsapp, .btn-email { flex: 1; }
     }
   </style>
 </head>
@@ -939,7 +744,7 @@
   <!-- HEADER -->
   <header>
     <a href="#" class="logo">
-      <div class="logo-mark"><i class="fas fa-bolt" style="color: #000000;"></i></div>
+      <div class="logo-mark"><i class="fas fa-bolt" style="color:#000000;"></i></div>
       izwecQR
     </a>
     <nav class="desk-nav">
@@ -947,8 +752,7 @@
       <a href="#demo">Demo</a>
       <a href="#comparison">Karşılaştırma</a>
       <a href="#testimonials">İncelemeler</a>
-      <a href="https://wa.me/905016980536?text=Merhaba,%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum."
-        target="_blank" class="nav-cta">Ücretsiz Başla</a>
+      <a href="https://wa.me/905016980536?text=Merhaba,%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="nav-cta">Ücretsiz Başla</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Menü">
       <span></span><span></span><span></span>
@@ -969,9 +773,7 @@
     <div class="hero-content">
       <div class="hero-badge"><i class="fas fa-bolt"></i> Türkiye'nin Lider Restoran Yönetim Platformu</div>
       <h1>Restoran Operasyonlarında <br><em>Yeni Nesil</em> Mükemmellik</h1>
-      <p>Geleneksel yöntemleri geride bırakın. Akıllı QR menü, entegre sipariş yönetimi ve gerçek zamanlı satış
-        analizleriyle operasyonel yükünüzü hafifletirken, misafirlerinize kusursuz bir dijital deneyim sunun. Saniyeler
-        içinde kurulumu tamamlayıp hemen kullanmaya başlayın.</p>
+      <p>Geleneksel yöntemleri geride bırakın. Akıllı QR menü, entegre sipariş yönetimi ve gerçek zamanlı satış analizleriyle operasyonel yükünüzü hafifletirken, misafirlerinize kusursuz bir dijital deneyim sunun. Saniyeler içinde kurulumu tamamlayıp hemen kullanmaya başlayın.</p>
       <div class="hero-actions">
         <a href="#cta" class="btn-primary">Hemen Başlayın <i class="fas fa-arrow-right"></i></a>
         <a href="#demo" class="btn-outline"><i class="fas fa-play"></i> Sistemi Keşfedin</a>
@@ -987,8 +789,7 @@
     <div class="section-head">
       <div class="section-label">Özellikler</div>
       <h2 class="section-title">Her Şey Tek Platformda</h2>
-      <p class="section-sub">Restoranınızın ihtiyaç duyduğu tüm modern araçlar bir arada. Karmaşıklık yok, sadece
-        verimlilik var.</p>
+      <p class="section-sub">Restoranınızın ihtiyaç duyduğu tüm modern araçlar bir arada. Karmaşıklık yok, sadece verimlilik var.</p>
     </div>
     <div class="feat-grid">
       <div class="feat-card">
@@ -1016,18 +817,74 @@
       <h2 class="section-title">Nasıl Çalışıyor?</h2>
       <p class="section-sub">Kurulumdan siparişe kadar tüm süreci izleyin. Sadece 2 dakikada hazır.</p>
     </div>
-    <div class="video-wrap">
-      <video class="video-poster" id="myVideo" src="img/izwecqrtanıtım.mp4" playsinline muted
-        preload="metadata"></video>
-      <div class="play-btn" id="playBtn"><i class="fas fa-play"></i></div>
+
+    <div class="vp-outer">
+      <div class="vp-wrap" id="vpWrap">
+
+        <video id="myVideo" src="img/izwecqrtanıtım.mp4"
+          playsinline muted preload="metadata"></video>
+
+        <!-- Unmute pill -->
+        <div class="vp-unmute" id="vpUnmute">
+          <div class="vp-unmute-pill" id="vpUnmutePill">
+            <i class="fas fa-volume-xmark"></i>
+            <span>Sesi açmak için tıklayın</span>
+          </div>
+        </div>
+
+        <!-- Center play/pause -->
+        <div class="vp-center" id="vpCenter">
+          <i class="fas fa-play" id="vpCenterIcon"></i>
+        </div>
+
+        <!-- Controls -->
+        <div class="vp-controls" id="vpControls">
+
+          <!-- Progress -->
+          <div class="vp-prog-track" id="vpProgTrack">
+            <div class="vp-prog-bg">
+              <div class="vp-prog-buf"  id="vpBuf"></div>
+              <div class="vp-prog-fill" id="vpFill"></div>
+              <div class="vp-prog-thumb" id="vpThumb"></div>
+            </div>
+            <div class="vp-tooltip" id="vpTooltip">0:00</div>
+          </div>
+
+          <!-- Bar -->
+          <div class="vp-bar">
+            <div class="vp-left">
+              <button class="vp-btn" id="vpPlayPause" aria-label="Oynat/Duraklat">
+                <i class="fas fa-pause" id="vpPlayIcon"></i>
+              </button>
+              <span class="vp-time" id="vpTime">0:00 / 0:00</span>
+            </div>
+            <div class="vp-right">
+              <div class="vp-vol-wrap">
+                <button class="vp-btn" id="vpMuteBtn" aria-label="Ses">
+                  <i class="fas fa-volume-xmark" id="vpVolIcon"></i>
+                </button>
+                <input type="range" class="vp-vol-slider" id="vpVolSlider"
+                  min="0" max="1" step="0.05" value="0">
+              </div>
+              <span class="vp-speed" id="vpSpeed">1x</span>
+              <button class="vp-btn" id="vpFs" aria-label="Tam Ekran">
+                <i class="fas fa-expand" id="vpFsIcon"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <p class="video-caption"><i class="fas fa-circle-info" style="margin-right:6px;"></i>Ortalama izlenme süresi 2 dakika — tüm kurulum ve sipariş akışını kapsar.</p>
     </div>
   </section>
+
+  <!-- COMPARISON -->
   <section class="comparison" id="comparison">
     <div class="section-head">
       <div class="section-label">Operasyonel Dönüşüm</div>
       <h2 class="section-title">Geleneksel Sistemler vs. Yeni Nesil Altyapı</h2>
-      <p class="section-sub">İşletmenizi hantallaştıran eski yöntemlerle, hızı ve karlılığı merkeze alan Qrizwec
-        ekosistemi arasındaki vizyon farkını keşfedin.</p>
+      <p class="section-sub">İşletmenizi hantallaştıran eski yöntemlerle, hızı ve karlılığı merkeze alan Qrizwec ekosistemi arasındaki vizyon farkını keşfedin.</p>
     </div>
     <div class="comp-inner">
       <div class="table-wrap">
@@ -1043,39 +900,35 @@
             <tr>
               <td><strong>Menü ve İçerik Yönetimi</strong></td>
               <td><span class="badge badge-no">Yüksek Matbaa Maliyeti / Uzun Revizyon</span></td>
-              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Sıfır Maliyet, Anında
-                  Dinamik Güncelleme</span></td>
+              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Sıfır Maliyet, Anında Dinamik Güncelleme</span></td>
             </tr>
             <tr>
               <td><strong>Sipariş ve Servis Hızı</strong></td>
               <td><span class="badge badge-no">Garson Bağımlı / Yoğunlukta Gecikme</span></td>
-              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Uçtan Uca Dijital,
-                  Hatasız İletim</span></td>
+              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Uçtan Uca Dijital, Hatasız İletim</span></td>
             </tr>
             <tr>
               <td><strong>Müşteri Davranış Analizi</strong></td>
-              <td><span class="badge badge-no"><i class="fas fa-times"></i> İçgörüden Yoksun / Gün Sonu Özeti</span>
-              </td>
-              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Gerçek Zamanlı ve
-                  Detaylı Analitik</span></td>
+              <td><span class="badge badge-no"><i class="fas fa-times"></i> İçgörüden Yoksun / Gün Sonu Özeti</span></td>
+              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Gerçek Zamanlı ve Detaylı Analitik</span></td>
             </tr>
             <tr>
               <td><strong>Ortalama Sepet (Ticket) Tutarı</strong></td>
               <td><span class="badge badge-no">Sınırlı Çapraz Satış (Up-sell)</span></td>
-              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-arrow-up"></i> Akıllı Önerilerle
-                  ~%28+ Ciro Artışı</span></td>
+              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-arrow-up"></i> Akıllı Önerilerle ~%28+ Ciro Artışı</span></td>
             </tr>
             <tr>
               <td><strong>Operasyonel İş Yükü</strong></td>
               <td><span class="badge badge-no">Yüksek Personel Maliyeti / Yoğun Stres</span></td>
-              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Optimize Edilmiş Akış
-                  ve Maksimum Verim</span></td>
+              <td class="col-highlight"><span class="badge badge-yes"><i class="fas fa-check"></i> Optimize Edilmiş Akış ve Maksimum Verim</span></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
+
+  <!-- TESTIMONIALS -->
   <section class="testimonials" id="testimonials">
     <div class="section-head">
       <div class="section-label">Müşteri Yorumları</div>
@@ -1085,8 +938,7 @@
     <div class="test-grid">
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <blockquote>Qrizwec sayesinde ortalama sipariş miktarımız %20 arttı. Müşteriler çok daha hızlı sipariş veriyor.
-          Artık kağıt menü baskısı masrafımız kalmadı.</blockquote>
+        <blockquote>Qrizwec sayesinde ortalama sipariş miktarımız %20 arttı. Müşteriler çok daha hızlı sipariş veriyor. Artık kağıt menü baskısı masrafımız kalmadı.</blockquote>
         <div class="test-author">
           <div class="avatar">GA</div>
           <div>
@@ -1097,8 +949,7 @@
       </div>
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <blockquote>Hem para hem zaman tasarrufu inanılmaz. Kurulumu gerçekten 2 dakika sürdü. Müşterilerim çok memnun,
-          tekrar gelenler arttı.</blockquote>
+        <blockquote>Hem para hem zaman tasarrufu inanılmaz. Kurulumu gerçekten 2 dakika sürdü. Müşterilerim çok memnun, tekrar gelenler arttı.</blockquote>
         <div class="test-author">
           <div class="avatar">AP</div>
           <div>
@@ -1109,8 +960,7 @@
       </div>
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <blockquote>Gerçek zamanlı analizler harika. Artık hangi ürünlere odaklanacağımı biliyorum. Satışlarım daha ilk
-          ayda %35 yükseldi.</blockquote>
+        <blockquote>Gerçek zamanlı analizler harika. Artık hangi ürünlere odaklanacağımı biliyorum. Satışlarım daha ilk ayda %35 yükseldi.</blockquote>
         <div class="test-author">
           <div class="avatar">ZK</div>
           <div>
@@ -1127,27 +977,27 @@
     <div class="cta-inner">
       <h2 class="section-title">İşletmenizi Büyütmeye Hazır Mısınız?</h2>
       <p>Dakikalar içinde kurulumunuzu yapın.</p>
-      <a href="https://wa.me/905016980536?text=Merhaba,%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum."
-        class="btn-white" target="_blank">
+      <a href="https://wa.me/905016980536?text=Merhaba,%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." class="btn-white" target="_blank">
         Bize Ulaşın! <i class="fas fa-arrow-right"></i>
       </a>
     </div>
   </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-section footer-brand">
           <a href="#" class="logo">
-            <div class="logo-mark"><i class="fas fa-bolt" style="color: #000000;"></i></div>
+            <div class="logo-mark"><i class="fas fa-bolt" style="color:#000000;"></i></div>
             izwecQR
           </a>
-          <p class="footer-desc">Türkiye'nin en hızlı restoran yönetim platformu. 500+ işletme zaten güvenyor.</p>
+          <p class="footer-desc">Türkiye'nin en hızlı restoran yönetim platformu. 500+ işletme zaten güveniyor.</p>
           <div class="footer-status">
-            <i class="fas fa-circle" style="color: #10b981; font-size: 10px; margin-right: 6px;"></i>
-            <span style="font-size: 13px; color: rgba(255, 255, 255, 0.7);">Sistemler Aktif</span>
+            <i class="fas fa-circle" style="color:#10b981;font-size:10px;margin-right:6px;"></i>
+            <span style="font-size:13px;color:rgba(255,255,255,.7);">Sistemler Aktif</span>
           </div>
         </div>
-
         <div class="footer-section footer-links-group">
           <h4 class="footer-section-title">Ürün</h4>
           <div class="footer-links">
@@ -1157,7 +1007,6 @@
             <a href="#testimonials">Müşteri Yorumları</a>
           </div>
         </div>
-
         <div class="footer-section footer-links-group">
           <h4 class="footer-section-title">Yasal</h4>
           <div class="footer-links">
@@ -1167,14 +1016,11 @@
             <a href="#">İletişim</a>
           </div>
         </div>
-
         <div class="footer-section footer-support">
           <h4 class="footer-section-title">Destek</h4>
-          <p style="font-size: 13px; color: rgba(255, 255, 255, 0.7); margin-bottom: 12px; line-height: 1.6;">
-            Sorularınız mı var? 7/24 yardımcı olmaya hazırız.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,.7);margin-bottom:12px;line-height:1.6;">Sorularınız mı var? 7/24 yardımcı olmaya hazırız.</p>
           <div class="support-buttons">
-            <a href="https://wa.me/905016980536?text=Merhaba%20Qrizwec,%20bilgi%20almak%20istiyorum" target="_blank"
-              class="btn-whatsapp">
+            <a href="https://wa.me/905016980536?text=Merhaba%20Qrizwec,%20bilgi%20almak%20istiyorum" target="_blank" class="btn-whatsapp">
               <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
           </div>
@@ -1192,10 +1038,8 @@
           <a href="#">Blog</a>
         </div>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/izwecqr/" target="_blank" title="Instagram"><i
-              class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/izwec-lab-81a36740a/" target="_blank" title="LinkedIn"><i
-              class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/izwecqr/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/izwec-lab-81a36740a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://wa.me/905016980536" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
@@ -1203,6 +1047,7 @@
   </footer>
 
   <script>
+    /* ── HAMBURGER ── */
     const ham = document.getElementById('hamburger');
     const drawer = document.getElementById('navDrawer');
     ham.addEventListener('click', () => {
@@ -1217,6 +1062,8 @@
         document.body.style.overflow = '';
       });
     });
+
+    /* ── SMOOTH SCROLL ── */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1224,28 +1071,215 @@
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
-    const video = document.getElementById('myVideo');
-    const playBtn = document.getElementById('playBtn');
 
-    playBtn.addEventListener('click', () => {
-      if (video.paused) {
+    /* ── VIDEO PLAYER ── */
+    (function () {
+      const video      = document.getElementById('myVideo');
+      const wrap       = document.getElementById('vpWrap');
+      const unmutePill = document.getElementById('vpUnmutePill');
+      const unmuteBox  = document.getElementById('vpUnmute');
+      const center     = document.getElementById('vpCenter');
+      const centerIcon = document.getElementById('vpCenterIcon');
+      const playPause  = document.getElementById('vpPlayPause');
+      const playIcon   = document.getElementById('vpPlayIcon');
+      const timeEl     = document.getElementById('vpTime');
+      const fill       = document.getElementById('vpFill');
+      const buf        = document.getElementById('vpBuf');
+      const thumb      = document.getElementById('vpThumb');
+      const progTrack  = document.getElementById('vpProgTrack');
+      const tooltip    = document.getElementById('vpTooltip');
+      const muteBtn    = document.getElementById('vpMuteBtn');
+      const volIcon    = document.getElementById('vpVolIcon');
+      const volSlider  = document.getElementById('vpVolSlider');
+      const speedEl    = document.getElementById('vpSpeed');
+      const fsBtn      = document.getElementById('vpFs');
+      const fsIcon     = document.getElementById('vpFsIcon');
+
+      const speeds = [0.5, 0.75, 1, 1.25, 1.5, 2];
+      let speedIdx = 2;
+      let ctrlTimeout;
+      let seeking = false;
+
+      function fmt(s) {
+        if (isNaN(s)) return '0:00';
+        const m = Math.floor(s / 60);
+        const sec = Math.floor(s % 60);
+        return m + ':' + (sec < 10 ? '0' : '') + sec;
+      }
+
+      function setPlayUI(playing) {
+        playIcon.className   = playing ? 'fas fa-pause' : 'fas fa-play';
+        centerIcon.className = playing ? 'fas fa-pause' : 'fas fa-play';
+        centerIcon.style.marginLeft = playing ? '0' : '3px';
+        if (playing) {
+          center.classList.add('playing');
+        } else {
+          center.classList.remove('playing');
+        }
+      }
+
+      function flashCenter() {
+        center.classList.remove('playing', 'flash');
+        void center.offsetWidth;
+        center.classList.add('flash');
+        setTimeout(() => {
+          center.classList.remove('flash');
+          if (!video.paused) center.classList.add('playing');
+        }, 380);
+      }
+
+      function showCtrl() {
+        wrap.classList.add('show-ctrl');
+        clearTimeout(ctrlTimeout);
+        if (!video.paused) {
+          ctrlTimeout = setTimeout(() => wrap.classList.remove('show-ctrl'), 2800);
+        }
+      }
+
+      function setVolUI() {
+        const muted = video.muted || video.volume === 0;
+        volIcon.className = muted ? 'fas fa-volume-xmark' : (video.volume < 0.5 ? 'fas fa-volume-low' : 'fas fa-volume-high');
+        volSlider.value = muted ? 0 : video.volume;
+      }
+
+      function unmute() {
         video.muted = false;
-        video.play();
-        playBtn.style.display = 'none';
+        video.volume = 0.8;
+        volSlider.value = 0.8;
+        setVolUI();
+        unmuteBox.classList.add('hidden');
       }
-    });
 
-    video.addEventListener('click', () => {
-      if (!video.paused) {
-        video.pause();
-        playBtn.style.display = 'flex';
+      /* Auto-play muted */
+      video.addEventListener('canplay', () => {
+        video.play().catch(() => {});
+      });
+
+      /* Unmute pill */
+      unmutePill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        unmute();
+      });
+
+      /* Click on video area */
+      wrap.addEventListener('click', (e) => {
+        if (e.target.closest('#vpControls') || e.target.closest('#vpUnmute')) return;
+        video.paused ? video.play() : video.pause();
+        flashCenter();
+        showCtrl();
+      });
+
+      wrap.addEventListener('mousemove', showCtrl);
+      wrap.addEventListener('mouseenter', showCtrl);
+      wrap.addEventListener('mouseleave', () => {
+        if (!video.paused) wrap.classList.remove('show-ctrl');
+      });
+
+      video.addEventListener('play',  () => { setPlayUI(true);  showCtrl(); });
+      video.addEventListener('pause', () => { setPlayUI(false); wrap.classList.add('show-ctrl'); });
+      video.addEventListener('ended', () => { setPlayUI(false); wrap.classList.add('show-ctrl'); });
+
+      /* Time update */
+      video.addEventListener('timeupdate', () => {
+        if (!video.duration) return;
+        const pct = (video.currentTime / video.duration) * 100;
+        fill.style.width  = pct + '%';
+        thumb.style.left  = pct + '%';
+        timeEl.textContent = fmt(video.currentTime) + ' / ' + fmt(video.duration);
+      });
+
+      /* Buffer */
+      video.addEventListener('progress', () => {
+        if (!video.duration || !video.buffered.length) return;
+        const pct = (video.buffered.end(video.buffered.length - 1) / video.duration) * 100;
+        buf.style.width = pct + '%';
+      });
+
+      /* Progress seek */
+      function seekAt(e) {
+        const rect = progTrack.getBoundingClientRect();
+        const pct  = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        video.currentTime = pct * (video.duration || 0);
       }
-    });
+      function tooltipAt(e) {
+        const rect = progTrack.getBoundingClientRect();
+        const pct  = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        tooltip.textContent = fmt(pct * (video.duration || 0));
+        tooltip.style.left  = (pct * 100) + '%';
+      }
 
-    video.addEventListener('ended', () => {
-      playBtn.style.display = 'flex';
-    });
+      progTrack.addEventListener('mousedown', (e) => { seeking = true; seekAt(e); showCtrl(); });
+      progTrack.addEventListener('mousemove', (e) => { tooltipAt(e); if (seeking) seekAt(e); });
+      document.addEventListener('mouseup', () => { seeking = false; });
+
+      /* Play/pause button */
+      playPause.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.paused ? video.play() : video.pause();
+        flashCenter();
+        showCtrl();
+      });
+
+      /* Mute button */
+      muteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video.muted) {
+          unmute();
+        } else {
+          video.muted = true;
+          setVolUI();
+        }
+        showCtrl();
+      });
+
+      /* Volume slider */
+      volSlider.addEventListener('input', (e) => {
+        e.stopPropagation();
+        video.muted = false;
+        video.volume = parseFloat(volSlider.value);
+        setVolUI();
+        unmuteBox.classList.add('hidden');
+        showCtrl();
+      });
+      volSlider.addEventListener('click', (e) => e.stopPropagation());
+
+      /* Speed toggle */
+      speedEl.addEventListener('click', (e) => {
+        e.stopPropagation();
+        speedIdx = (speedIdx + 1) % speeds.length;
+        video.playbackRate = speeds[speedIdx];
+        speedEl.textContent = speeds[speedIdx] + 'x';
+        showCtrl();
+      });
+
+      /* Fullscreen */
+      fsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!document.fullscreenElement) {
+          (wrap.requestFullscreen || wrap.webkitRequestFullscreen).call(wrap);
+        } else {
+          (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+        }
+        showCtrl();
+      });
+      document.addEventListener('fullscreenchange', () => {
+        fsIcon.className = document.fullscreenElement ? 'fas fa-compress' : 'fas fa-expand';
+      });
+      document.addEventListener('webkitfullscreenchange', () => {
+        fsIcon.className = document.fullscreenElement ? 'fas fa-compress' : 'fas fa-expand';
+      });
+
+      /* Keyboard shortcuts */
+      document.addEventListener('keydown', (e) => {
+        if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+        if (e.code === 'Space')      { e.preventDefault(); video.paused ? video.play() : video.pause(); flashCenter(); showCtrl(); }
+        if (e.code === 'ArrowRight') { e.preventDefault(); video.currentTime = Math.min(video.duration || 0, video.currentTime + 5); showCtrl(); }
+        if (e.code === 'ArrowLeft')  { e.preventDefault(); video.currentTime = Math.max(0, video.currentTime - 5); showCtrl(); }
+        if (e.code === 'KeyM')       { muteBtn.click(); }
+        if (e.code === 'KeyF')       { fsBtn.click(); }
+      });
+
+    })();
   </script>
 </body>
-
 </html>
